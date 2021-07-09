@@ -35,4 +35,4 @@ The following is a brief orientation of the files in the respository:
 * VAChart.csv - orginal data visualization output needs
 * CCTVAChart2.csv - data output needs for OEHRM leadership - Version 2
 
-Data preparation and analytics by Greg Gabbert, MD MPH
+Data preparation and analytics by Greg Gabbert, MD MPH  

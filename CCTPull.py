@@ -55,6 +55,7 @@ def CCTPull(CountyVACOVID):
     VISN10Data = CountyVACOVID[CountyVACOVID['FIPS'].isin(VISN10List)]
 
     VISN10Cases = VISN10Data['CASES'].sum()
+    VISN10_NewCases = VISN10Cases-VISN10Data['YESTER_CASES'].sum()  
     VISN10_VACases = VISN10Data['VET_CASES'].sum()
 
     #VISN 12 level Pulls
@@ -62,6 +63,7 @@ def CCTPull(CountyVACOVID):
     VISN12Data = CountyVACOVID[CountyVACOVID['FIPS'].isin(VISN12List)]
 
     VISN12Cases = VISN12Data['CASES'].sum()
+    VISN12_NewCases = VISN12Cases-VISN12Data['YESTER_CASES'].sum()  
     VISN12_VACases = VISN12Data['VET_CASES'].sum()
 
     #VISN 20 level Pulls
@@ -69,6 +71,7 @@ def CCTPull(CountyVACOVID):
     VISN20Data = CountyVACOVID[CountyVACOVID['FIPS'].isin(VISN20List)]
 
     VISN20Cases = VISN20Data['CASES'].sum()
+    VISN20_NewCases = VISN20Cases-VISN20Data['YESTER_CASES'].sum()  
     VISN20_VACases = VISN20Data['VET_CASES'].sum()
 
     #VISN 15 level Pulls
@@ -76,6 +79,7 @@ def CCTPull(CountyVACOVID):
     VISN15Data = CountyVACOVID[CountyVACOVID['FIPS'].isin(VISN15List)]
 
     VISN15Cases = VISN15Data['CASES'].sum()
+    VISN15_NewCases = VISN15Cases-VISN15Data['YESTER_CASES'].sum()  
     VISN15_VACases = VISN15Data['VET_CASES'].sum()
 
     #VISN 23 level Pulls
@@ -83,6 +87,7 @@ def CCTPull(CountyVACOVID):
     VISN23Data = CountyVACOVID[CountyVACOVID['FIPS'].isin(VISN23List)]
 
     VISN23Cases = VISN23Data['CASES'].sum()
+    VISN23_NewCases = VISN23Cases-VISN23Data['YESTER_CASES'].sum()  
     VISN23_VACases = VISN23Data['VET_CASES'].sum()
 
 
@@ -169,10 +174,15 @@ def CCTPull(CountyVACOVID):
                             'New US Cases': USNewCases,
                             
                             'VISN10 Cases': VISN10Cases,
+                            'VISN10 NewCases':VISN10_NewCases,
                             'VISN12 Cases': VISN12Cases,
+                            'VISN12 NewCases':VISN12_NewCases,
                             'VISN20 Cases': VISN20Cases,
+                            'VISN20 NewCases':VISN20_NewCases,
                             'VISN15 Cases': VISN15Cases,
+                            'VISN15 NewCases':VISN15_NewCases,
                             'VISN23 Cases': VISN23Cases,
+                            'VISN23 NewCases':VISN23_NewCases,
 
                             'WA Cases': StateDataSet["Washington"][0],
                             'WA NewCases' : StateDataSet["Washington"][1],

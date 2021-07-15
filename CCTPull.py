@@ -232,7 +232,7 @@ def CCTPull(CountyVACOVID):
                             'VISN23 VACases': VISN23_VACases,
                             
                             'OH VACases': StateDataSet["Ohio"][2],
-                            'OH NewVACases' : StateDataSet["Ohio"][3],
+                            'OH NewVACases' : StateDataSet["Ohio"][3], 
                             'IN VACases': StateDataSet["Indiana"][2],
                             'IN NewVACases' : StateDataSet["Indiana"][3],
                             'MI VACases': StateDataSet["Michigan"][2],

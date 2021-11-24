@@ -167,7 +167,7 @@ def CCTPull(CountyVACOVID):
 
 
     #Establish a cyclical chart to add new rows for every date it is run
-    CCTVAChart = pd.read_csv('CCTVAChart2.csv')
+    CCTVAChart = pd.read_csv('CCTVAChart3.csv')
     CCTVAChart = CCTVAChart.set_index('index').T.rename_axis('DATE').reset_index()
     CCTVAChart_newrow = pd.DataFrame({ 'DATE': TodayDate,
                             'US Cases': USCasesToday,
@@ -915,4 +915,4 @@ def CCTPull(CountyVACOVID):
 
     CCTVAChart = pd.concat([CCTVAChart_newrow, CCTVAChart]).reset_index(drop=True).drop_duplicates(subset='DATE',keep='first').round(2)
     CCTVAChart = CCTVAChart.set_index('DATE').T.reset_index()
-    CCTVAChart.to_csv('CCTVAChart2.csv',index=False) 
+    CCTVAChart.to_csv('CCTVAChart3.csv',index=False) 

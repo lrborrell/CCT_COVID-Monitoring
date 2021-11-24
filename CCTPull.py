@@ -582,7 +582,7 @@ def CCTPull(CountyVACOVID):
     #CCTVAChart_newrow['VISN23 Cases'] = CCTVAChart_newrow['VISN23 Cases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['VISN23 NewCases'] = CCTVAChart_newrow['VISN23 NewCases'].map('{:,.2f}'.format)
     
-    CCTVAChart_newrow['OH Cases'] = CCTVAChart_newrow['TEST OH CASES'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['TEST OH CASES'] = CCTVAChart_newrow['OH Cases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['OH NewCases'] = CCTVAChart_newrow['OH NewCases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['IN Cases'] = CCTVAChart_newrow['IN Cases'].map('{:,.2f}'.format)

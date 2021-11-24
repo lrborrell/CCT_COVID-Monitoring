@@ -170,7 +170,7 @@ def CCTPull(CountyVACOVID):
     CCTVAChart = pd.read_csv('CCTVAChart2.csv')
     CCTVAChart = CCTVAChart.set_index('index').T.rename_axis('DATE').reset_index()
     CCTVAChart_newrow = pd.DataFrame({ 'DATE': TodayDate,
-                            'TEST US Cases': USCasesToday,
+                            'US Cases': USCasesToday,
                             'New US Cases': USNewCases,
                                       
                             'VISN20 Cases': VISN20Cases,
@@ -284,8 +284,8 @@ def CCTPull(CountyVACOVID):
                     # CCT DOES NOT REPORT THESE ESTIMATES
                             
                             #WCPAC (WC)
-                            'Las Vegas VAMC TotalSumCases': DataSet["North Las Vegas VA Medical Center"][0],
-                            'Las Vegas VAMC NewSumCases': DataSet["North Las Vegas VA Medical Center"][1],
+                            'Las Vegas WCPAC TotalSumCases': DataSet["North Las Vegas VA Medical Center"][0],
+                            'Las Vegas WCPAC NewSumCases': DataSet["North Las Vegas VA Medical Center"][1],
                             #'Las Vegas VAMC ECases': DataSet["North Las Vegas VA Medical Center"][2],
                             #'Las Vegas VAMC NewECases': DataSet["North Las Vegas VA Medical Center"][3],
 
@@ -320,34 +320,34 @@ def CCTPull(CountyVACOVID):
                             #'White City VAMC NewECases': DataSet["White City VA Medical Center"][3],
 
                             #Puget Sound (PS)
-                            'Seattle VAMC TotalSumCases': DataSet["Seattle VA Medical Center"][0],
-                            'Seattle VAMC NewSumCases': DataSet["Seattle VA Medical Center"][1],
-                            #'Seattle VAMC ECases': DataSet["Seattle VA Medical Center"][2],
-                            #'Seattle VAMC NewECases': DataSet["Seattle VA Medical Center"][3],
+                            'Puget Sound VAMC TotalSumCases': DataSet["Seattle VA Medical Center"][0],
+                            'Puget Sound VAMC NewSumCases': DataSet["Seattle VA Medical Center"][1],
+                            #'Puget Sound VAMC ECases': DataSet["Seattle VA Medical Center"][2],
+                            #'Puget Sound VAMC NewECases': DataSet["Seattle VA Medical Center"][3],
 
                             #Mann-Grandstaff (MG)
-                            'Mann-Grandstaff VAMC TotalSumCases': DataSet["Mann-Grandstaff Department of Veterans Affairs Medical Center"][0],
-                            'Mann-Grandstaff VAMC NewSumCases': DataSet["Mann-Grandstaff Department of Veterans Affairs Medical Center"][1],
-                            #'Mann-Grandstaff VAMC ECases': DataSet["Mann-Grandstaff Department of Veterans Affairs Medical Center"][2],
-                            #'Mann-Grandstaff VAMC NewECases': DataSet["Mann-Grandstaff Department of Veterans Affairs Medical Center"][3],
+                            'Spokane VAMC TotalSumCases': DataSet["Mann-Grandstaff Department of Veterans Affairs Medical Center"][0],
+                            'Spokane VAMC NewSumCases': DataSet["Mann-Grandstaff Department of Veterans Affairs Medical Center"][1],
+                            #'Spokane VAMC ECases': DataSet["Mann-Grandstaff Department of Veterans Affairs Medical Center"][2],
+                            #'Spokane VAMC NewECases': DataSet["Mann-Grandstaff Department of Veterans Affairs Medical Center"][3],
 
                             #Walla Walla (WW)
-                            'Jonathan M. VAMC TotalSumCases': DataSet["Jonathan M. Wainwright Memorial VA Medical Center"][0],
-                            'Jonathan M. VAMC NewSumCases': DataSet["Jonathan M. Wainwright Memorial VA Medical Center"][1],
+                            'Walla Walla VAMC TotalSumCases': DataSet["Jonathan M. Wainwright Memorial VA Medical Center"][0],
+                            'Walla Walla VAMC NewSumCases': DataSet["Jonathan M. Wainwright Memorial VA Medical Center"][1],
                             #'Jonathan M. VAMC ECases': DataSet["Jonathan M. Wainwright Memorial VA Medical Center"][2],
                             #'Jonathan M. VAMC NewECases': DataSet["Jonathan M. Wainwright Memorial VA Medical Center"][3]
                                       
                             #Fort Wayne (FW)
-                            'Fort Wayne VAMC TotalSumCases' : DataSet["Fort Wayne VA Medical Center"][0], 
-                            'Fort Wayne VAMC NewSumCases' : DataSet["Fort Wayne VA Medical Center"][1], 
+                            'Walla Walla VAMC TotalSumCases' : DataSet["Fort Wayne VA Medical Center"][0], 
+                            'Walla Walla VAMC NewSumCases' : DataSet["Fort Wayne VA Medical Center"][1], 
                             #'Fort Wayne VAMC ECases' : DataSet["Fort Wayne VA Medical Center"][2], 
                             #'Fort Wayne VAMC NewECases' : DataSet["Fort Wayne VA Medical Center"][3],   
 
                             #Indianapolis (IN)
-                            'Richard L. VAMC TotalSumCases' : DataSet["Richard L. Roudebush Veterans\' Administration Medical Center"][0], 
-                            'Richard L. VAMC NewSumCases' : DataSet["Richard L. Roudebush Veterans\' Administration Medical Center"][1], 
-                            #'Richard L. VAMC ECases' : DataSet["Richard L. Roudebush Veterans\' Administration Medical Center"][2], 
-                            #'Richard L. VAMC NewECases' : DataSet["Richard L. Roudebush Veterans\' Administration Medical Center"][3],
+                            'Indianapolis VAMC TotalSumCases' : DataSet["Richard L. Roudebush Veterans\' Administration Medical Center"][0], 
+                            'Indianapolis VAMC NewSumCases' : DataSet["Richard L. Roudebush Veterans\' Administration Medical Center"][1], 
+                            #'Indianapolis VAMC ECases' : DataSet["Richard L. Roudebush Veterans\' Administration Medical Center"][2], 
+                            #'Indianapolis VAMC NewECases' : DataSet["Richard L. Roudebush Veterans\' Administration Medical Center"][3],
 
                             #Marion (MA)
                             'Marion VAMC TotalSumCases' : DataSet["Marion VA Medical Center"][0], 
@@ -356,10 +356,10 @@ def CCTPull(CountyVACOVID):
                             #'Marion VAMC NewECases' : DataSet["Marion VA Medical Center"][3], 
 
                              #Ann Arbor (AA)
-                            'Lieutenant Colonel Charles S. VAMC TotalSumCases': DataSet["Lieutenant Colonel Charles S. Kettles VA Medical Center"][0],
-                            'Lieutenant Colonel Charles S. VAMC NewSumCases': DataSet["Lieutenant Colonel Charles S. Kettles VA Medical Center"][1],
-                            #'Lieutenant Colonel Charles S. VAMC ECases': DataSet["Lieutenant Colonel Charles S. Kettles VA Medical Center"][2],
-                            #'Lieutenant Colonel Charles S. VAMC NewECases': DataSet["Lieutenant Colonel Charles S. Kettles VA Medical Center"][3],
+                            'Ann Arbor VAMC TotalSumCases': DataSet["Lieutenant Colonel Charles S. Kettles VA Medical Center"][0],
+                            'Ann Arbor VAMC NewSumCases': DataSet["Lieutenant Colonel Charles S. Kettles VA Medical Center"][1],
+                            #'Ann Arbor VAMC ECases': DataSet["Lieutenant Colonel Charles S. Kettles VA Medical Center"][2],
+                            #'Ann Arbor VAMC NewECases': DataSet["Lieutenant Colonel Charles S. Kettles VA Medical Center"][3],
 
                             #Battle Creek (BC)
                             'Battle Creek VAMC TotalSumCases': DataSet["Battle Creek VA Medical Center"][0],
@@ -367,9 +367,9 @@ def CCTPull(CountyVACOVID):
                             #'Battle Creek VAMC ECases': DataSet["Battle Creek VA Medical Center"][2],
                             #'Battle Creek VAMC NewECases': DataSet["Battle Creek VA Medical Center"][3],
                             
-                             #Detroit (DE)
-                            'John D. Dingell VAMC TotalSumCases': DataSet["John D. Dingell Department of Veterans Affairs Medical Center"][0],
-                            'John D. Dingell VAMC NewSumCases': DataSet["John D. Dingell Department of Veterans Affairs Medical Center"][1],
+                            #Detroit (DE)
+                            'Detroit VAMC TotalSumCases': DataSet["John D. Dingell Department of Veterans Affairs Medical Center"][0],
+                            'Detroit VAMC NewSumCases': DataSet["John D. Dingell Department of Veterans Affairs Medical Center"][1],
                             #'John D. Dingell VAMC ECases': DataSet["John D. Dingell Department of Veterans Affairs Medical Center"][2],
                             #'John D. Dingell VAMC NewECases': DataSet["John D. Dingell Department of Veterans Affairs Medical Center"][3],
 
@@ -392,13 +392,12 @@ def CCTPull(CountyVACOVID):
                             #'Cincinnati VAMC NewECases' : DataSet["Cincinnati VA Medical Center"][3],
 
                             #Cleveland (CL)
-                            'Louis Stokes VAMC TotalSumCases' : DataSet["Louis Stokes Cleveland Department of Veterans Affairs Medical Center"][0], 
-                            'Louis Stokes VAMC NewSumCases' : DataSet["Louis Stokes Cleveland Department of Veterans Affairs Medical Center"][1], 
+                            'Cleveland VAMC TotalSumCases' : DataSet["Louis Stokes Cleveland Department of Veterans Affairs Medical Center"][0], 
+                            'Cleveland VAMC NewSumCases' : DataSet["Louis Stokes Cleveland Department of Veterans Affairs Medical Center"][1], 
                             #'Louis Stokes VAMC ECases' : DataSet["Louis Stokes Cleveland Department of Veterans Affairs Medical Center"][2], 
                             #'Louis Stokes VAMC NewECases' : DataSet["Louis Stokes Cleveland Department of Veterans Affairs Medical Center"][3],
 
                             #Columbus (CO) (Hard-Coded)
-
                             'Columbus VAMC TotalSumCases' : DataSet["Columbus VA Medical Center"][0],
                             'Columbus VAMC NewSumCases' : DataSet["Columbus VA Medical Center"][1],
                             #'Columbus VAMC ECases' : DataSet["Columbus VA Medical Center"][2],
@@ -411,50 +410,55 @@ def CCTPull(CountyVACOVID):
                             #'Dayton VAMC NewECases' : DataSet["Dayton VA Medical Center"][3],
                             
                             #Jesse Brown (JE)
-                            'Jesse Brown VAMC TotalSumCases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][0],
-                            'Jesse Brown VAMC NewSumCases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][1],
-                            #'Jesse Brown VAMC ECases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][2],
-                            #'Jesse Brown VAMC NewECases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][3],
+                            'Chicago VAMC TotalSumCases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][0],
+                            'Chicago VAMC NewSumCases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][1],
+                            #'Chicago VAMC ECases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][2],
+                            #'Chicago VAMC NewECases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][3],
 
-                           #Danville (DN)
+                            #Danville (DN)
                             'Danville VAMC TotalSumCases' : DataSet["Danville VA Medical Center"][0], 
                             'Danville VAMC NewSumCases' : DataSet["Danville VA Medical Center"][1], 
                             #'Danville VAMC ECases' : DataSet["Danville VA Medical Center"][2], 
                             #'Danville VAMC NewECases' : DataSet["Danville VA Medical Center"][3],
 
                             #Clement J. Zablocki (CZ)
-                            'Clement J. VAMC TotalSumCases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][0],
-                            'Clement J. VAMC NewSumCases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][1],
-                            #'Clement J. VAMC ECases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][2],
-                            #'Clement J. VAMC NewECases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][3],
-
+                            'Milwaukee VAMC TotalSumCases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][0],
+                            'Milwaukee VAMC NewSumCases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][1],
+                            #'Milwaukee VAMC ECases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][2],
+                            #'Milwaukee VAMC NewECases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][3],
+                            
+                            #MADISON COMBINED W/ MILWAUKEE - SERVICE AREA COUNTIES IDENTICAL          
                             #William S. Middleton Memorial (WM)
-                            'William S. VAMC TotalSumCases': DataSet['William S. Middleton Memorial Veterans\' Hospital'][0],
-                            'William S. VAMC NewSumCases': DataSet['William S. Middleton Memorial Veterans\' Hospital'][1],
+                            #'William S. VAMC TotalSumCases': DataSet['William S. Middleton Memorial Veterans\' Hospital'][0],
+                            #'William S. VAMC NewSumCases': DataSet['William S. Middleton Memorial Veterans\' Hospital'][1],
                             #'William S. VAMC ECases': DataSet['William S. Middleton Memorial Veterans\' Hospital'][2],
                             #'William S. VAMC NewECases': DataSet['William S. Middleton Memorial Veterans\' Hospital'][3],
 
+                            #IRON MOUNTAIN COMBINED W/ TOMAH - SERVICE AREA COUNTIES IDENTICAL      
                             #Oscar G. Johnson (OJ)
-                            'Oscar G. VAMC TotalSumCases': DataSet["Oscar G. Johnson Department of Veterans Affairs Medical Facility"][0],
-                            'Oscar G. VAMC NewSumCases': DataSet["Oscar G. Johnson Department of Veterans Affairs Medical Facility"][1],
+                            #'Oscar G. VAMC TotalSumCases': DataSet["Oscar G. Johnson Department of Veterans Affairs Medical Facility"][0],
+                            #'Oscar G. VAMC NewSumCases': DataSet["Oscar G. Johnson Department of Veterans Affairs Medical Facility"][1],
                             #'Oscar G. VAMC ECases': DataSet["Oscar G. Johnson Department of Veterans Affairs Medical Facility"][2],
                             #'Oscar G. VAMC NewECases': DataSet["Oscar G. Johnson Department of Veterans Affairs Medical Facility"][3],                                                                                                                                         
                             
+                            #SAGINAW COMBINED W/ BATTLE CREEK - SERVICE AREA COUNTIES IDENTICAL
                             #Saginaw (SA)
-                            'Aleda E. VAMC TotalSumCases' : DataSet["Aleda E. Lutz Department of Veterans Affairs Medical Center"][0], 
-                            'Aleda E. VAMC NewSumCases' : DataSet["Aleda E. Lutz Department of Veterans Affairs Medical Center"][1], 
+                            #'Saginaw VAMC TotalSumCases' : DataSet["Aleda E. Lutz Department of Veterans Affairs Medical Center"][0], 
+                            #'Saginaw VAMC NewSumCases' : DataSet["Aleda E. Lutz Department of Veterans Affairs Medical Center"][1], 
                             #'Aleda E. VAMC ECases' : DataSet["Aleda E. Lutz Department of Veterans Affairs Medical Center"][2], 
                             #'Aleda E. VAMC NewECases' : DataSet["Aleda E. Lutz Department of Veterans Affairs Medical Center"][3], 
-
+                            
+                            #HINES COMBINED W/ CHICAGO - SERVICE AREA COUNTIES IDENTICAL          
                             #Hines (HN)
-                            'Edward Hines VAMC TotalSumCases' : DataSet["Edward Hines Junior Hospital"][0], 
-                            'Edward Hines VAMC NewSumCases' : DataSet["Edward Hines Junior Hospital"][1], 
+                            #'Edward Hines VAMC TotalSumCases' : DataSet["Edward Hines Junior Hospital"][0], 
+                            #'Edward Hines VAMC NewSumCases' : DataSet["Edward Hines Junior Hospital"][1], 
                             #'Edward Hines VAMC ECases' : DataSet["Edward Hines Junior Hospital"][2], 
                             #'Edward Hines VAMC NewECases' : DataSet["Edward Hines Junior Hospital"][3], 
                             
+                            # NORTH CHICAGO COMBINED W/ CHICAGO - SERVICE AREA COUNTIES IDENTICAL          
                             #North Chicago (NC)
-                            'Captain James A. VAMC TotalSumCases' : DataSet["Captain James A. Lovell Federal Health Care Center"][0], 
-                            'Captain James A. VAMC NewSumCases' : DataSet["Captain James A. Lovell Federal Health Care Center"][1], 
+                            #'Captain James A. VAMC TotalSumCases' : DataSet["Captain James A. Lovell Federal Health Care Center"][0], 
+                            #'Captain James A. VAMC NewSumCases' : DataSet["Captain James A. Lovell Federal Health Care Center"][1], 
                             #'Captain James A. VAMC ECases' : DataSet["Captain James A. Lovell Federal Health Care Center"][2], 
                             #'Captain James A. VAMC NewECases' : DataSet["Captain James A. Lovell Federal Health Care Center"][3], 
                     
@@ -568,7 +572,7 @@ def CCTPull(CountyVACOVID):
                             #'Royal C. Johnson VAMC NewECases' : DataSet["Royal C. Johnson Veterans' Memorial Hospital"][3],
                             }, index=[0])
 
-    CCTVAChart_newrow['TEST US Cases'] = CCTVAChart_newrow['TEST US Cases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['US Cases'] = CCTVAChart_newrow['US Cases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['New US Cases'] = CCTVAChart_newrow['New US Cases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['VISN20 Cases'] = CCTVAChart_newrow['VISN20 Cases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['VISN20 NewCases'] = CCTVAChart_newrow['VISN20 NewCases'].map('{:,.2f}'.format)
@@ -683,105 +687,85 @@ def CCTPull(CountyVACOVID):
     #CCTVAChart_newrow['SD VACases'] = CCTVAChart_newrow['SD VACases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['SD NewVACases'] = CCTVAChart_newrow['SD NewVACases'].map('{:,.2f}'.format)
  
+    CCTVAChart_newrow['Las Vegas WCPAC TotalSumCases'] = CCTVAChart_newrow['Las Vegas WCPAC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Las Vegas WCPAC NewSumCases'] = CCTVAChart_newrow['Las Vegas WCPAC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Las Vegas VAMC ECases'] = CCTVAChart_newrow['Las Vegas VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Las Vegas VAMC NewECases'] = CCTVAChart_newrow['Las Vegas VAMC NewECases'].map('{:,.2f}'.format)
+    
     CCTVAChart_newrow['Anchorage VAMC TotalSumCases'] = CCTVAChart_newrow['Anchorage VAMC TotalSumCases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['Anchorage VAMC NewSumCases'] = CCTVAChart_newrow['Anchorage VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Anchorage VAMC ECases'] = CCTVAChart_newrow['Anchorage VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Anchorage VAMC NewECases'] = CCTVAChart_newrow['Anchorage VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['Portland VAMC TotalSumCases'] = CCTVAChart_newrow['Portland VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Portland VAMC NewSumCases'] = CCTVAChart_newrow['Portland VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Portland VAMC ECases'] = CCTVAChart_newrow['Portland VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Portland VAMC NewECases'] = CCTVAChart_newrow['Portland VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['Las Vegas VAMC TotalSumCases'] = CCTVAChart_newrow['Las Vegas VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Las Vegas VAMC NewSumCases'] = CCTVAChart_newrow['Las Vegas VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Las Vegas VAMC ECases'] = CCTVAChart_newrow['Las Vegas VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Las Vegas VAMC NewECases'] = CCTVAChart_newrow['Las Vegas VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['Jonathan M. VAMC TotalSumCases'] = CCTVAChart_newrow['Jonathan M. VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Jonathan M. VAMC NewSumCases'] = CCTVAChart_newrow['Jonathan M. VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Jonathan M. VAMC ECases'] = CCTVAChart_newrow['Jonathan M. VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Jonathan M. VAMC NewECases'] = CCTVAChart_newrow['Jonathan M. VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['White City VAMC TotalSumCases'] = CCTVAChart_newrow['White City VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['White City VAMC NewSumCases'] = CCTVAChart_newrow['White City VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['White City VAMC ECases'] = CCTVAChart_newrow['White City VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['White City VAMC NewECases'] = CCTVAChart_newrow['White City VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['Roseburg  VAMC TotalSumCases'] = CCTVAChart_newrow['Roseburg  VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Roseburg VAMC NewSumCases'] = CCTVAChart_newrow['Roseburg VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Roseburg VAMC ECases'] = CCTVAChart_newrow['Roseburg VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Roseburg VAMC NewECases'] = CCTVAChart_newrow['Roseburg VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['Seattle VAMC TotalSumCases'] = CCTVAChart_newrow['Seattle VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Seattle VAMC NewSumCases'] = CCTVAChart_newrow['Seattle VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Seattle VAMC ECases'] = CCTVAChart_newrow['Seattle VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Seattle VAMC NewECases'] = CCTVAChart_newrow['Seattle VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['Mann-Grandstaff VAMC TotalSumCases'] = CCTVAChart_newrow['Mann-Grandstaff VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Mann-Grandstaff VAMC NewSumCases'] = CCTVAChart_newrow['Mann-Grandstaff VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Mann-Grandstaff VAMC ECases'] = CCTVAChart_newrow['Mann-Grandstaff VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Mann-Grandstaff VAMC NewECases'] = CCTVAChart_newrow['Mann-Grandstaff VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Boise VAMC TotalSumCases'] = CCTVAChart_newrow['Boise VAMC TotalSumCases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['Boise VAMC NewSumCases'] = CCTVAChart_newrow['Boise VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Boise VAMC ECases'] = CCTVAChart_newrow['Boise VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Boise VAMC NewECases'] = CCTVAChart_newrow['Boise VAMC NewECases'].map('{:,.2f}'.format)
     
-    CCTVAChart_newrow['Jesse Brown VAMC TotalSumCases'] = CCTVAChart_newrow['Jesse Brown VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Jesse Brown VAMC NewSumCases'] = CCTVAChart_newrow['Jesse Brown VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Jesse Brown VAMC ECases'] = CCTVAChart_newrow['Jesse Brown VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Jesse Brown VAMC NewECases'] = CCTVAChart_newrow['Jesse Brown VAMC NewECases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Portland VAMC TotalSumCases'] = CCTVAChart_newrow['Portland VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Portland VAMC NewSumCases'] = CCTVAChart_newrow['Portland VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Portland VAMC ECases'] = CCTVAChart_newrow['Portland VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Portland VAMC NewECases'] = CCTVAChart_newrow['Portland VAMC NewECases'].map('{:,.2f}'.format)
     
-    CCTVAChart_newrow['William S. VAMC TotalSumCases'] = CCTVAChart_newrow['William S. VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['William S. VAMC NewSumCases'] = CCTVAChart_newrow['William S. VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['William S. VAMC ECases'] = CCTVAChart_newrow['William S. VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['William S. VAMC NewECases'] = CCTVAChart_newrow['William S. VAMC NewECases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Roseburg  VAMC TotalSumCases'] = CCTVAChart_newrow['Roseburg  VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Roseburg VAMC NewSumCases'] = CCTVAChart_newrow['Roseburg VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Roseburg VAMC ECases'] = CCTVAChart_newrow['Roseburg VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Roseburg VAMC NewECases'] = CCTVAChart_newrow['Roseburg VAMC NewECases'].map('{:,.2f}'.format)
     
-    CCTVAChart_newrow['Clement J. VAMC TotalSumCases'] = CCTVAChart_newrow['Clement J. VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Clement J. VAMC NewSumCases'] = CCTVAChart_newrow['Clement J. VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Clement J. VAMC ECases'] = CCTVAChart_newrow['Clement J. VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Clement J. VAMC NewECases'] = CCTVAChart_newrow['Clement J. VAMC NewECases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['White City VAMC TotalSumCases'] = CCTVAChart_newrow['White City VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['White City VAMC NewSumCases'] = CCTVAChart_newrow['White City VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['White City VAMC ECases'] = CCTVAChart_newrow['White City VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['White City VAMC NewECases'] = CCTVAChart_newrow['White City VAMC NewECases'].map('{:,.2f}'.format)
     
-    CCTVAChart_newrow['Oscar G. VAMC TotalSumCases'] = CCTVAChart_newrow['Oscar G. VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Oscar G. VAMC NewSumCases'] = CCTVAChart_newrow['Oscar G. VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Oscar G. VAMC ECases'] = CCTVAChart_newrow['Oscar G. VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Oscar G. VAMC NewECases'] = CCTVAChart_newrow['Oscar G. VAMC NewECases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Puget Sound VAMC TotalSumCases'] = CCTVAChart_newrow['Puget Sound VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Puget Sound VAMC NewSumCases'] = CCTVAChart_newrow['Puget Sound VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Puget Sound VAMC ECases'] = CCTVAChart_newrow['Puget Sound VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Puget Sound VAMC NewECases'] = CCTVAChart_newrow['Puget Sound VAMC NewECases'].map('{:,.2f}'.format)
     
-    CCTVAChart_newrow['Lieutenant Colonel Charles S. VAMC TotalSumCases'] = CCTVAChart_newrow['Lieutenant Colonel Charles S. VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Lieutenant Colonel Charles S. VAMC NewSumCases'] = CCTVAChart_newrow['Lieutenant Colonel Charles S. VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Lieutenant Colonel Charles S. VAMC ECases'] = CCTVAChart_newrow['Lieutenant Colonel Charles S. VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Lieutenant Colonel Charles S. VAMC NewECases'] = CCTVAChart_newrow['Lieutenant Colonel Charles S. VAMC NewECases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Spokane VAMC TotalSumCases'] = CCTVAChart_newrow['Spokane VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Spokane VAMC NewSumCases'] = CCTVAChart_newrow['Spokane VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Spokane VAMC ECases'] = CCTVAChart_newrow['Spokane VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Spokane VAMC NewECases'] = CCTVAChart_newrow['Spokane VAMC NewECases'].map('{:,.2f}'.format)
     
-    CCTVAChart_newrow['Battle Creek VAMC TotalSumCases'] = CCTVAChart_newrow['Battle Creek VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Battle Creek VAMC NewSumCases'] = CCTVAChart_newrow['Battle Creek VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Battle Creek VAMC ECases'] = CCTVAChart_newrow['Battle Creek VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Battle Creek VAMC NewECases'] = CCTVAChart_newrow['Battle Creek VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['John D. Dingell VAMC TotalSumCases'] = CCTVAChart_newrow['John D. Dingell VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['John D. Dingell VAMC NewSumCases'] = CCTVAChart_newrow['John D. Dingell VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['John D. Dingell VAMC ECases'] = CCTVAChart_newrow['John D. Dingell VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['John D. Dingell VAMC NewECases'] = CCTVAChart_newrow['John D. Dingell VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['Aleda E. VAMC TotalSumCases'] = CCTVAChart_newrow['Aleda E. VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Aleda E. VAMC NewSumCases'] = CCTVAChart_newrow['Aleda E. VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Aleda E. VAMC ECases'] = CCTVAChart_newrow['Aleda E. VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Aleda E. VAMC NewECases'] = CCTVAChart_newrow['Aleda E. VAMC NewECases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Walla Walla VAMC TotalSumCases'] = CCTVAChart_newrow['Walla Walla VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Walla Walla VAMC NewSumCases'] = CCTVAChart_newrow['Walla Walla VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Walla Walla VAMC ECases'] = CCTVAChart_newrow['Walla Walla VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Walla Walla VAMC NewECases'] = CCTVAChart_newrow['Walla Walla VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Fort Wayne VAMC TotalSumCases'] = CCTVAChart_newrow['Fort Wayne VAMC TotalSumCases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['Fort Wayne VAMC NewSumCases'] = CCTVAChart_newrow['Fort Wayne VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Fort Wayne VAMC ECases'] = CCTVAChart_newrow['Fort Wayne VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Fort Wayne VAMC NewECases'] = CCTVAChart_newrow['Fort Wayne VAMC NewECases'].map('{:,.2f}'.format)
     
+    CCTVAChart_newrow['Indianapolis VAMC TotalSumCases'] = CCTVAChart_newrow['Indianapolis VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Indianapolis VAMC NewSumCases'] = CCTVAChart_newrow['Indianapolis VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Indianapolis VAMC ECases'] = CCTVAChart_newrow['Indianapolis VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Indianapolis VAMC NewECases'] = CCTVAChart_newrow['Indianapolis VAMC NewECases'].map('{:,.2f}'.format)
+    
     CCTVAChart_newrow['Marion VAMC TotalSumCases'] = CCTVAChart_newrow['Marion VAMC TotalSumCases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['Marion VAMC NewSumCases'] = CCTVAChart_newrow['Marion VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Marion VAMC ECases'] = CCTVAChart_newrow['Marion VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Marion VAMC NewECases'] = CCTVAChart_newrow['Marion VAMC NewECases'].map('{:,.2f}'.format)
     
-    CCTVAChart_newrow['Richard L. VAMC TotalSumCases'] = CCTVAChart_newrow['Richard L. VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Richard L. VAMC NewSumCases'] = CCTVAChart_newrow['Richard L. VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Richard L. VAMC ECases'] = CCTVAChart_newrow['Richard L. VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Richard L. VAMC NewECases'] = CCTVAChart_newrow['Richard L. VAMC NewECases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Ann Arbor VAMC TotalSumCases'] = CCTVAChart_newrow['Ann Arbor VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Ann Arbor VAMC NewSumCases'] = CCTVAChart_newrow['Ann Arbor VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Ann Arbor VAMC ECases'] = CCTVAChart_newrow['Ann Arbor VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Ann Arbor VAMC NewECases'] = CCTVAChart_newrow['Ann Arbor VAMC NewECases'].map('{:,.2f}'.format)
+    
+    CCTVAChart_newrow['Battle Creek VAMC TotalSumCases'] = CCTVAChart_newrow['Battle Creek VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Battle Creek VAMC NewSumCases'] = CCTVAChart_newrow['Battle Creek VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Battle Creek VAMC ECases'] = CCTVAChart_newrow['Battle Creek VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Battle Creek VAMC NewECases'] = CCTVAChart_newrow['Battle Creek VAMC NewECases'].map('{:,.2f}'.format)
+    
+    CCTVAChart_newrow['Detroit VAMC TotalSumCases'] = CCTVAChart_newrow['Detroit VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Detroit VAMC NewSumCases'] = CCTVAChart_newrow['Detroit VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Detroit VAMC ECases'] = CCTVAChart_newrow['Detroit VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Detroit VAMC NewECases'] = CCTVAChart_newrow['Detroit VAMC NewECases'].map('{:,.2f}'.format)
+    
+    CCTVAChart_newrow['Tomah VAMC TotalSumCases'] = CCTVAChart_newrow['Tomah VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Tomah VAMC NewSumCases'] = CCTVAChart_newrow['Tomah VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Tomah VAMC ECases'] = CCTVAChart_newrow['Tomah VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Tomah VAMC NewECases'] = CCTVAChart_newrow['Tomah VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Chillicothe VAMC TotalSumCases'] = CCTVAChart_newrow['Chillicothe VAMC TotalSumCases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['Chillicothe VAMC NewSumCases'] = CCTVAChart_newrow['Chillicothe VAMC NewSumCases'].map('{:,.2f}'.format)
@@ -793,41 +777,58 @@ def CCTPull(CountyVACOVID):
     #CCTVAChart_newrow['Cincinnati VAMC ECases'] = CCTVAChart_newrow['Cincinnati VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Cincinnati VAMC NewECases'] = CCTVAChart_newrow['Cincinnati VAMC NewECases'].map('{:,.2f}'.format)
     
-    CCTVAChart_newrow['Louis Stokes VAMC TotalSumCases'] = CCTVAChart_newrow['Louis Stokes VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Louis Stokes VAMC NewSumCases'] = CCTVAChart_newrow['Louis Stokes VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Louis Stokes VAMC ECases'] = CCTVAChart_newrow['Louis Stokes VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Louis Stokes VAMC NewECases'] = CCTVAChart_newrow['Louis Stokes VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['Dayton VAMC TotalSumCases'] = CCTVAChart_newrow['Dayton VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Dayton VAMC NewSumCases'] = CCTVAChart_newrow['Dayton VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Dayton VAMC ECases'] = CCTVAChart_newrow['Dayton VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Dayton VAMC NewECases'] = CCTVAChart_newrow['Dayton VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['Danville VAMC TotalSumCases'] = CCTVAChart_newrow['Danville VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Danville VAMC NewSumCases'] = CCTVAChart_newrow['Danville VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Danville VAMC ECases'] = CCTVAChart_newrow['Danville VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Danville VAMC NewECases'] = CCTVAChart_newrow['Danville VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['Edward Hines VAMC TotalSumCases'] = CCTVAChart_newrow['Edward Hines VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Edward Hines VAMC NewSumCases'] = CCTVAChart_newrow['Edward Hines VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Edward Hines VAMC ECases'] = CCTVAChart_newrow['Edward Hines VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Edward Hines VAMC NewECases'] = CCTVAChart_newrow['Edward Hines VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['Captain James A. VAMC TotalSumCases'] = CCTVAChart_newrow['Captain James A. VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Captain James A. VAMC NewSumCases'] = CCTVAChart_newrow['Captain James A. VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Captain James A. VAMC ECases'] = CCTVAChart_newrow['Captain James A. VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Captain James A. VAMC NewECases'] = CCTVAChart_newrow['Captain James A. VAMC NewECases'].map('{:,.2f}'.format)
-    
-    CCTVAChart_newrow['Tomah VAMC TotalSumCases'] = CCTVAChart_newrow['Tomah VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Tomah VAMC NewSumCases'] = CCTVAChart_newrow['Tomah VAMC NewSumCases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Tomah VAMC ECases'] = CCTVAChart_newrow['Tomah VAMC ECases'].map('{:,.2f}'.format)
-    #CCTVAChart_newrow['Tomah VAMC NewECases'] = CCTVAChart_newrow['Tomah VAMC NewECases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Cleveland VAMC TotalSumCases'] = CCTVAChart_newrow['Cleveland VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Cleveland VAMC NewSumCases'] = CCTVAChart_newrow['Cleveland VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Cleveland VAMC ECases'] = CCTVAChart_newrow['Cleveland VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Cleveland VAMC NewECases'] = CCTVAChart_newrow['Cleveland VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Columbus VAMC TotalSumCases'] = CCTVAChart_newrow['Columbus VAMC TotalSumCases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['Columbus VAMC NewSumCases'] = CCTVAChart_newrow['Columbus VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Columbus VAMC ECases'] = CCTVAChart_newrow['Columbus VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Columbus VAMC NewECases'] = CCTVAChart_newrow['Columbus VAMC NewECases'].map('{:,.2f}'.format)
     
+    CCTVAChart_newrow['Dayton VAMC TotalSumCases'] = CCTVAChart_newrow['Dayton VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Dayton VAMC NewSumCases'] = CCTVAChart_newrow['Dayton VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Dayton VAMC ECases'] = CCTVAChart_newrow['Dayton VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Dayton VAMC NewECases'] = CCTVAChart_newrow['Dayton VAMC NewECases'].map('{:,.2f}'.format)
+    
+    CCTVAChart_newrow['Chicago VAMC TotalSumCases'] = CCTVAChart_newrow['Chicago VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Chicago VAMC NewSumCases'] = CCTVAChart_newrow['Chicago VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Chicago VAMC ECases'] = CCTVAChart_newrow['Chicago VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Chicago VAMC NewECases'] = CCTVAChart_newrow['Chicago VAMC NewECases'].map('{:,.2f}'.format)
+    
+    CCTVAChart_newrow['Danville VAMC TotalSumCases'] = CCTVAChart_newrow['Danville VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Danville VAMC NewSumCases'] = CCTVAChart_newrow['Danville VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Danville VAMC ECases'] = CCTVAChart_newrow['Danville VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Danville VAMC NewECases'] = CCTVAChart_newrow['Danville VAMC NewECases'].map('{:,.2f}'.format)
+    
+    CCTVAChart_newrow['Milwaukee VAMC TotalSumCases'] = CCTVAChart_newrow['Milwaukee VAMC TotalSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Milwaukee VAMC NewSumCases'] = CCTVAChart_newrow['Milwaukee VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Milwaukee VAMC ECases'] = CCTVAChart_newrow['Milwaukee VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Milwaukee VAMC NewECases'] = CCTVAChart_newrow['Milwaukee VAMC NewECases'].map('{:,.2f}'.format)
+    
+    # MIDDLETON = MADISON; REPORTING COMBINED W/ MILWAUKEE
+    #CCTVAChart_newrow['William S. VAMC TotalSumCases'] = CCTVAChart_newrow['William S. VAMC TotalSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['William S. VAMC NewSumCases'] = CCTVAChart_newrow['William S. VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['William S. VAMC ECases'] = CCTVAChart_newrow['William S. VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['William S. VAMC NewECases'] = CCTVAChart_newrow['William S. VAMC NewECases'].map('{:,.2f}'.format)
+    
+    # OSCAR G = IRON MOUNTAIN; REPORTING COMBINED W/ TOMAH
+    #CCTVAChart_newrow['Oscar G. VAMC TotalSumCases'] = CCTVAChart_newrow['Oscar G. VAMC TotalSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Oscar G. VAMC NewSumCases'] = CCTVAChart_newrow['Oscar G. VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Oscar G. VAMC ECases'] = CCTVAChart_newrow['Oscar G. VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Oscar G. VAMC NewECases'] = CCTVAChart_newrow['Oscar G. VAMC NewECases'].map('{:,.2f}'.format)
+    
+    #CCTVAChart_newrow['Edward Hines VAMC TotalSumCases'] = CCTVAChart_newrow['Edward Hines VAMC TotalSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Edward Hines VAMC NewSumCases'] = CCTVAChart_newrow['Edward Hines VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Edward Hines VAMC ECases'] = CCTVAChart_newrow['Edward Hines VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Edward Hines VAMC NewECases'] = CCTVAChart_newrow['Edward Hines VAMC NewECases'].map('{:,.2f}'.format)
+    
+    #CCTVAChart_newrow['Captain James A. VAMC TotalSumCases'] = CCTVAChart_newrow['Captain James A. VAMC TotalSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Captain James A. VAMC NewSumCases'] = CCTVAChart_newrow['Captain James A. VAMC NewSumCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Captain James A. VAMC ECases'] = CCTVAChart_newrow['Captain James A. VAMC ECases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['Captain James A. VAMC NewECases'] = CCTVAChart_newrow['Captain James A. VAMC NewECases'].map('{:,.2f}'.format)
+        
     #CCTVAChart_newrow['Colmery VAMC TotalSumCases'] = CCTVAChart_newrow['Colmery VAMC TotalSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Colmery VAMC NewSumCases'] = CCTVAChart_newrow['Colmery VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Colmery VAMC ECases'] = CCTVAChart_newrow['Colmery VAMC ECases'].map('{:,.2f}'.format)

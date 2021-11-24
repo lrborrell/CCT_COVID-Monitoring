@@ -170,7 +170,7 @@ def CCTPull(CountyVACOVID):
     CCTVAChart = pd.read_csv('CCTVAChart2.csv')
     CCTVAChart = CCTVAChart.set_index('index').T.rename_axis('DATE').reset_index()
     CCTVAChart_newrow = pd.DataFrame({ 'DATE': TodayDate,
-                            'US Cases': USCasesToday,
+                            'TEST US Cases': USCasesToday,
                             'New US Cases': USNewCases,
                                       
                             'VISN20 Cases': VISN20Cases,
@@ -568,7 +568,7 @@ def CCTPull(CountyVACOVID):
                             #'Royal C. Johnson VAMC NewECases' : DataSet["Royal C. Johnson Veterans' Memorial Hospital"][3],
                             }, index=[0])
 
-    CCTVAChart_newrow['US Cases'] = CCTVAChart_newrow['US Cases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['TEST US Cases'] = CCTVAChart_newrow['TEST US Cases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['New US Cases'] = CCTVAChart_newrow['New US Cases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['VISN20 Cases'] = CCTVAChart_newrow['VISN20 Cases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['VISN20 NewCases'] = CCTVAChart_newrow['VISN20 NewCases'].map('{:,.2f}'.format)
@@ -582,7 +582,7 @@ def CCTPull(CountyVACOVID):
     #CCTVAChart_newrow['VISN23 Cases'] = CCTVAChart_newrow['VISN23 Cases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['VISN23 NewCases'] = CCTVAChart_newrow['VISN23 NewCases'].map('{:,.2f}'.format)
     
-    CCTVAChart_newrow['TEST OH CASES'] = CCTVAChart_newrow['OH Cases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['OH Cases'] = CCTVAChart_newrow['OH Cases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['OH NewCases'] = CCTVAChart_newrow['OH NewCases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['IN Cases'] = CCTVAChart_newrow['IN Cases'].map('{:,.2f}'.format)

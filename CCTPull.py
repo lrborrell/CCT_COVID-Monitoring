@@ -226,10 +226,9 @@ def CCTPull(CountyVACOVID):
                             #'SD Cases': StateDataSet["South Dakota"][0],
                             #'SD NewCases' : StateDataSet["South Dakota"][1],
                             
-                            'VISN20 VACases': VISN20_VACases,
-                            'VISN10 VACases': VISN10_VACases,
-                            'VISN12 VACases': VISN12_VACases,
-                       
+                            #'VISN20 VACases': VISN20_VACases,
+                            #'VISN10 VACases': VISN10_VACases,
+                            #'VISN12 VACases': VISN12_VACases,
                             #'VISN15 VACases': VISN15_VACases,
                             #'VISN23 VACases': VISN23_VACases,
                             
@@ -285,8 +284,8 @@ def CCTPull(CountyVACOVID):
                     # CCT DOES NOT REPORT THESE ESTIMATES
                             
                             #WCPAC (WC)
-                            'Las Vegas VAMC TotalSumCases': DataSet["North Las Vegas VA Medical Center"][0],
-                            'Las Vegas VAMC NewSumCases': DataSet["North Las Vegas VA Medical Center"][1],
+                            'Las Vegas WCPAC TotalSumCases': DataSet["North Las Vegas VA Medical Center"][0],
+                            'Las Vegas WCPAC NewSumCases': DataSet["North Las Vegas VA Medical Center"][1],
                             #'Las Vegas VAMC ECases': DataSet["North Las Vegas VA Medical Center"][2],
                             #'Las Vegas VAMC NewECases': DataSet["North Las Vegas VA Medical Center"][3],
 

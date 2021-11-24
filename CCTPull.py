@@ -284,8 +284,8 @@ def CCTPull(CountyVACOVID):
                     # CCT DOES NOT REPORT THESE ESTIMATES
                             
                             #WCPAC (WC)
-                            'Las Vegas WCPAC TotalSumCases': DataSet["North Las Vegas VA Medical Center"][0],
-                            'Las Vegas WCPAC NewSumCases': DataSet["North Las Vegas VA Medical Center"][1],
+                            'Las Vegas VAMC TotalSumCases': DataSet["North Las Vegas VA Medical Center"][0],
+                            'Las Vegas VAMC NewSumCases': DataSet["North Las Vegas VA Medical Center"][1],
                             #'Las Vegas VAMC ECases': DataSet["North Las Vegas VA Medical Center"][2],
                             #'Las Vegas VAMC NewECases': DataSet["North Las Vegas VA Medical Center"][3],
 
@@ -582,7 +582,7 @@ def CCTPull(CountyVACOVID):
     #CCTVAChart_newrow['VISN23 Cases'] = CCTVAChart_newrow['VISN23 Cases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['VISN23 NewCases'] = CCTVAChart_newrow['VISN23 NewCases'].map('{:,.2f}'.format)
     
-    CCTVAChart_newrow['OH Cases'] = CCTVAChart_newrow['OH Cases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['OH Cases'] = CCTVAChart_newrow['TEST OH CASES'].map('{:,.2f}'.format)
     CCTVAChart_newrow['OH NewCases'] = CCTVAChart_newrow['OH NewCases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['IN Cases'] = CCTVAChart_newrow['IN Cases'].map('{:,.2f}'.format)

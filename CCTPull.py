@@ -338,8 +338,8 @@ def CCTPull(CountyVACOVID):
                             #'Jonathan M. VAMC NewECases': DataSet["Jonathan M. Wainwright Memorial VA Medical Center"][3]
                                       
                             #Fort Wayne (FW)
-                            'Walla Walla VAMC TotalSumCases' : DataSet["Fort Wayne VA Medical Center"][0], 
-                            'Walla Walla VAMC NewSumCases' : DataSet["Fort Wayne VA Medical Center"][1], 
+                            'Fort Wayne VAMC TotalSumCases' : DataSet["Fort Wayne VA Medical Center"][0], 
+                            'Fort Wayne VAMC NewSumCases' : DataSet["Fort Wayne VA Medical Center"][1], 
                             #'Fort Wayne VAMC ECases' : DataSet["Fort Wayne VA Medical Center"][2], 
                             #'Fort Wayne VAMC NewECases' : DataSet["Fort Wayne VA Medical Center"][3],   
 

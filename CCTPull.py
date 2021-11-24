@@ -336,26 +336,8 @@ def CCTPull(CountyVACOVID):
                             'Jonathan M. VAMC TotalSumCases': DataSet["Jonathan M. Wainwright Memorial VA Medical Center"][0],
                             'Jonathan M. VAMC NewSumCases': DataSet["Jonathan M. Wainwright Memorial VA Medical Center"][1],
                             #'Jonathan M. VAMC ECases': DataSet["Jonathan M. Wainwright Memorial VA Medical Center"][2],
-                            #'Jonathan M. VAMC NewECases': DataSet["Jonathan M. Wainwright Memorial VA Medical Center"][3],
-                                                                                                                                                                                                                                      
-                            #Jesse Brown (JE)
-                            'Jesse Brown VAMC TotalSumCases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][0],
-                            'Jesse Brown VAMC NewSumCases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][1],
-                            #'Jesse Brown VAMC ECases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][2],
-                            #'Jesse Brown VAMC NewECases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][3],
-
-                           #Danville (DN)
-                            'Danville VAMC TotalSumCases' : DataSet["Danville VA Medical Center"][0], 
-                            'Danville VAMC NewSumCases' : DataSet["Danville VA Medical Center"][1], 
-                            #'Danville VAMC ECases' : DataSet["Danville VA Medical Center"][2], 
-                            #'Danville VAMC NewECases' : DataSet["Danville VA Medical Center"][3],
-
-                            #Clement J. Zablocki (CZ)
-                            'Clement J. VAMC TotalSumCases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][0],
-                            'Clement J. VAMC NewSumCases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][1],
-                            #'Clement J. VAMC ECases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][2],
-                            #'Clement J. VAMC NewECases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][3],
-
+                            #'Jonathan M. VAMC NewECases': DataSet["Jonathan M. Wainwright Memorial VA Medical Center"][3]
+                                      
                             #Fort Wayne (FW)
                             'Fort Wayne VAMC TotalSumCases' : DataSet["Fort Wayne VA Medical Center"][0], 
                             'Fort Wayne VAMC NewSumCases' : DataSet["Fort Wayne VA Medical Center"][1], 
@@ -428,6 +410,24 @@ def CCTPull(CountyVACOVID):
                             'Dayton VAMC NewSumCases' : DataSet["Dayton VA Medical Center"][1],
                             #'Dayton VAMC ECases' : DataSet["Dayton VA Medical Center"][2],
                             #'Dayton VAMC NewECases' : DataSet["Dayton VA Medical Center"][3],
+                            
+                            #Jesse Brown (JE)
+                            'Jesse Brown VAMC TotalSumCases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][0],
+                            'Jesse Brown VAMC NewSumCases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][1],
+                            #'Jesse Brown VAMC ECases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][2],
+                            #'Jesse Brown VAMC NewECases': DataSet["Jesse Brown Department of Veterans Affairs Medical Center"][3],
+
+                           #Danville (DN)
+                            'Danville VAMC TotalSumCases' : DataSet["Danville VA Medical Center"][0], 
+                            'Danville VAMC NewSumCases' : DataSet["Danville VA Medical Center"][1], 
+                            #'Danville VAMC ECases' : DataSet["Danville VA Medical Center"][2], 
+                            #'Danville VAMC NewECases' : DataSet["Danville VA Medical Center"][3],
+
+                            #Clement J. Zablocki (CZ)
+                            'Clement J. VAMC TotalSumCases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][0],
+                            'Clement J. VAMC NewSumCases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][1],
+                            #'Clement J. VAMC ECases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][2],
+                            #'Clement J. VAMC NewECases': DataSet['Clement J. Zablocki Veterans\' Administration Medical Center'][3],
 
                             #William S. Middleton Memorial (WM)
                             'William S. VAMC TotalSumCases': DataSet['William S. Middleton Memorial Veterans\' Hospital'][0],

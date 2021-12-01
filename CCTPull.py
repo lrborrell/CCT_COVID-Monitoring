@@ -211,8 +211,8 @@ def CCTPull(CountyVACOVID):
                             'VA Cases': StateDataSet["Virginia"][0],
                             'VA NewCases' : StateDataSet["Virginia"][1],
                                       
-                            #'MO Cases': StateDataSet["Missouri"][0],
-                            #'MO NewCases' : StateDataSet["Missouri"][1],
+                            'MO Cases': StateDataSet["Missouri"][0],
+                            'MO NewCases' : StateDataSet["Missouri"][1],
                             #'KS Cases': StateDataSet["Kansas"][0],
                             #'KS NewCases' : StateDataSet["Kansas"][1],
                             #'IA Cases': StateDataSet["Iowa"][0],

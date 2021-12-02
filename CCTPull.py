@@ -205,14 +205,14 @@ def CCTPull(CountyVACOVID):
                             'IL NewCases' : StateDataSet["Illinois"][1],
                            
                             'DC Cases': StateDataSet["District of Columbia"][0],
-                            'DC NewCases' : StateDataSet["District of Columbia"][1],                                                     
+                            #'DC NewCases' : StateDataSet["District of Columbia"][1],                                                     
                             'MD Cases': StateDataSet["Maryland"][0],
-                            'MD NewCases' : StateDataSet["Maryland"][1],
+                            #'MD NewCases' : StateDataSet["Maryland"][1],
                             'VA Cases': StateDataSet["Virginia"][0],
-                            'VA NewCases' : StateDataSet["Virginia"][1],
+                            #'VA NewCases' : StateDataSet["Virginia"][1],
                                       
                             'MO Cases': StateDataSet["Missouri"][0],
-                            'MO NewCases' : StateDataSet["Missouri"][1],
+                            #'MO NewCases' : StateDataSet["Missouri"][1],
                             #'KS Cases': StateDataSet["Kansas"][0],
                             #'KS NewCases' : StateDataSet["Kansas"][1],
                             #'IA Cases': StateDataSet["Iowa"][0],
@@ -613,16 +613,16 @@ def CCTPull(CountyVACOVID):
     CCTVAChart_newrow['AK Cases'] = CCTVAChart_newrow['AK Cases'].map('{:,.2f}'.format)
     CCTVAChart_newrow['AK NewCases'] = CCTVAChart_newrow['AK NewCases'].map('{:,.2f}'.format)
     
+    CCTVAChart_newrow['DC Cases'] = CCTVAChart_newrow['DC Cases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['DC NewCases'] = CCTVAChart_newrow['DC NewCases'].map('{:,.2f}'.format)
+    
     CCTVAChart_newrow['MD Cases'] = CCTVAChart_newrow['MD Cases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['MD NewCases'] = CCTVAChart_newrow['MD NewCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['MD NewCases'] = CCTVAChart_newrow['MD NewCases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['VA Cases'] = CCTVAChart_newrow['VA Cases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['VA NewCases'] = CCTVAChart_newrow['VA NewCases'].map('{:,.2f}'.format)
+    #CCTVAChart_newrow['VA NewCases'] = CCTVAChart_newrow['VA NewCases'].map('{:,.2f}'.format)
     
-    CCTVAChart_newrow['DC Cases'] = CCTVAChart_newrow['DC Cases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['DC NewCases'] = CCTVAChart_newrow['DC NewCases'].map('{:,.2f}'.format)
-    
-    #CCTVAChart_newrow['MO Cases'] = CCTVAChart_newrow['MO Cases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['MO Cases'] = CCTVAChart_newrow['MO Cases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['MO NewCases'] = CCTVAChart_newrow['MO NewCases'].map('{:,.2f}'.format)
     
     #CCTVAChart_newrow['KS Cases'] = CCTVAChart_newrow['KS Cases'].map('{:,.2f}'.format)
@@ -688,124 +688,125 @@ def CCTPull(CountyVACOVID):
     #CCTVAChart_newrow['SD NewVACases'] = CCTVAChart_newrow['SD NewVACases'].map('{:,.2f}'.format)
  
     CCTVAChart_newrow['Las Vegas WCPAC TotalSumCases'] = CCTVAChart_newrow['Las Vegas WCPAC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Las Vegas WCPAC NewSumCases'] = CCTVAChart_newrow['Las Vegas WCPAC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Las Vegas VAMC ECases'] = CCTVAChart_newrow['Las Vegas VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Las Vegas VAMC NewECases'] = CCTVAChart_newrow['Las Vegas VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Anchorage VAMC TotalSumCases'] = CCTVAChart_newrow['Anchorage VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Anchorage VAMC NewSumCases'] = CCTVAChart_newrow['Anchorage VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Anchorage VAMC ECases'] = CCTVAChart_newrow['Anchorage VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Anchorage VAMC NewECases'] = CCTVAChart_newrow['Anchorage VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Boise VAMC TotalSumCases'] = CCTVAChart_newrow['Boise VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Boise VAMC NewSumCases'] = CCTVAChart_newrow['Boise VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Boise VAMC ECases'] = CCTVAChart_newrow['Boise VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Boise VAMC NewECases'] = CCTVAChart_newrow['Boise VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Portland VAMC TotalSumCases'] = CCTVAChart_newrow['Portland VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Portland VAMC NewSumCases'] = CCTVAChart_newrow['Portland VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Portland VAMC ECases'] = CCTVAChart_newrow['Portland VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Portland VAMC NewECases'] = CCTVAChart_newrow['Portland VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Roseburg  VAMC TotalSumCases'] = CCTVAChart_newrow['Roseburg  VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Roseburg VAMC NewSumCases'] = CCTVAChart_newrow['Roseburg VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Roseburg VAMC ECases'] = CCTVAChart_newrow['Roseburg VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Roseburg VAMC NewECases'] = CCTVAChart_newrow['Roseburg VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['White City VAMC TotalSumCases'] = CCTVAChart_newrow['White City VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['White City VAMC NewSumCases'] = CCTVAChart_newrow['White City VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['White City VAMC ECases'] = CCTVAChart_newrow['White City VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['White City VAMC NewECases'] = CCTVAChart_newrow['White City VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Puget Sound VAMC TotalSumCases'] = CCTVAChart_newrow['Puget Sound VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Puget Sound VAMC NewSumCases'] = CCTVAChart_newrow['Puget Sound VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Puget Sound VAMC ECases'] = CCTVAChart_newrow['Puget Sound VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Puget Sound VAMC NewECases'] = CCTVAChart_newrow['Puget Sound VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Spokane VAMC TotalSumCases'] = CCTVAChart_newrow['Spokane VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Spokane VAMC NewSumCases'] = CCTVAChart_newrow['Spokane VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Spokane VAMC ECases'] = CCTVAChart_newrow['Spokane VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Spokane VAMC NewECases'] = CCTVAChart_newrow['Spokane VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Walla Walla VAMC TotalSumCases'] = CCTVAChart_newrow['Walla Walla VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Walla Walla VAMC NewSumCases'] = CCTVAChart_newrow['Walla Walla VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Walla Walla VAMC ECases'] = CCTVAChart_newrow['Walla Walla VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Walla Walla VAMC NewECases'] = CCTVAChart_newrow['Walla Walla VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Fort Wayne VAMC TotalSumCases'] = CCTVAChart_newrow['Fort Wayne VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Fort Wayne VAMC NewSumCases'] = CCTVAChart_newrow['Fort Wayne VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Fort Wayne VAMC ECases'] = CCTVAChart_newrow['Fort Wayne VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Fort Wayne VAMC NewECases'] = CCTVAChart_newrow['Fort Wayne VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Indianapolis VAMC TotalSumCases'] = CCTVAChart_newrow['Indianapolis VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Indianapolis VAMC NewSumCases'] = CCTVAChart_newrow['Indianapolis VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Indianapolis VAMC ECases'] = CCTVAChart_newrow['Indianapolis VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Indianapolis VAMC NewECases'] = CCTVAChart_newrow['Indianapolis VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Marion VAMC TotalSumCases'] = CCTVAChart_newrow['Marion VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Marion VAMC NewSumCases'] = CCTVAChart_newrow['Marion VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Marion VAMC ECases'] = CCTVAChart_newrow['Marion VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Marion VAMC NewECases'] = CCTVAChart_newrow['Marion VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Ann Arbor VAMC TotalSumCases'] = CCTVAChart_newrow['Ann Arbor VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Ann Arbor VAMC NewSumCases'] = CCTVAChart_newrow['Ann Arbor VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Ann Arbor VAMC ECases'] = CCTVAChart_newrow['Ann Arbor VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Ann Arbor VAMC NewECases'] = CCTVAChart_newrow['Ann Arbor VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Battle Creek VAMC TotalSumCases'] = CCTVAChart_newrow['Battle Creek VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Battle Creek VAMC NewSumCases'] = CCTVAChart_newrow['Battle Creek VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Battle Creek VAMC ECases'] = CCTVAChart_newrow['Battle Creek VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Battle Creek VAMC NewECases'] = CCTVAChart_newrow['Battle Creek VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Detroit VAMC TotalSumCases'] = CCTVAChart_newrow['Detroit VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Detroit VAMC NewSumCases'] = CCTVAChart_newrow['Detroit VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Detroit VAMC ECases'] = CCTVAChart_newrow['Detroit VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Detroit VAMC NewECases'] = CCTVAChart_newrow['Detroit VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Tomah VAMC TotalSumCases'] = CCTVAChart_newrow['Tomah VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Tomah VAMC NewSumCases'] = CCTVAChart_newrow['Tomah VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Tomah VAMC ECases'] = CCTVAChart_newrow['Tomah VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Tomah VAMC NewECases'] = CCTVAChart_newrow['Tomah VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Chillicothe VAMC TotalSumCases'] = CCTVAChart_newrow['Chillicothe VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Chillicothe VAMC NewSumCases'] = CCTVAChart_newrow['Chillicothe VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Chillicothe VAMC ECases'] = CCTVAChart_newrow['Chillicothe VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Chillicothe VAMC NewECases'] = CCTVAChart_newrow['Chillicothe VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Cincinnati VAMC TotalSumCases'] = CCTVAChart_newrow['Cincinnati VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Cincinnati VAMC NewSumCases'] = CCTVAChart_newrow['Cincinnati VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Cincinnati VAMC ECases'] = CCTVAChart_newrow['Cincinnati VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Cincinnati VAMC NewECases'] = CCTVAChart_newrow['Cincinnati VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Cleveland VAMC TotalSumCases'] = CCTVAChart_newrow['Cleveland VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Cleveland VAMC NewSumCases'] = CCTVAChart_newrow['Cleveland VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Cleveland VAMC ECases'] = CCTVAChart_newrow['Cleveland VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Cleveland VAMC NewECases'] = CCTVAChart_newrow['Cleveland VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Columbus VAMC TotalSumCases'] = CCTVAChart_newrow['Columbus VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Columbus VAMC NewSumCases'] = CCTVAChart_newrow['Columbus VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Columbus VAMC ECases'] = CCTVAChart_newrow['Columbus VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Columbus VAMC NewECases'] = CCTVAChart_newrow['Columbus VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Dayton VAMC TotalSumCases'] = CCTVAChart_newrow['Dayton VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Dayton VAMC NewSumCases'] = CCTVAChart_newrow['Dayton VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Dayton VAMC ECases'] = CCTVAChart_newrow['Dayton VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Dayton VAMC NewECases'] = CCTVAChart_newrow['Dayton VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Chicago VAMC TotalSumCases'] = CCTVAChart_newrow['Chicago VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Chicago VAMC NewSumCases'] = CCTVAChart_newrow['Chicago VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Chicago VAMC ECases'] = CCTVAChart_newrow['Chicago VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Chicago VAMC NewECases'] = CCTVAChart_newrow['Chicago VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Danville VAMC TotalSumCases'] = CCTVAChart_newrow['Danville VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Danville VAMC NewSumCases'] = CCTVAChart_newrow['Danville VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Danville VAMC ECases'] = CCTVAChart_newrow['Danville VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Danville VAMC NewECases'] = CCTVAChart_newrow['Danville VAMC NewECases'].map('{:,.2f}'.format)
     
     CCTVAChart_newrow['Milwaukee VAMC TotalSumCases'] = CCTVAChart_newrow['Milwaukee VAMC TotalSumCases'].map('{:,.2f}'.format)
-    CCTVAChart_newrow['Milwaukee VAMC NewSumCases'] = CCTVAChart_newrow['Milwaukee VAMC NewSumCases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Milwaukee VAMC ECases'] = CCTVAChart_newrow['Milwaukee VAMC ECases'].map('{:,.2f}'.format)
     #CCTVAChart_newrow['Milwaukee VAMC NewECases'] = CCTVAChart_newrow['Milwaukee VAMC NewECases'].map('{:,.2f}'.format)
+    
+    CCTVAChart_newrow['Las Vegas WCPAC NewSumCases'] = CCTVAChart_newrow['Las Vegas WCPAC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Anchorage VAMC NewSumCases'] = CCTVAChart_newrow['Anchorage VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Boise VAMC NewSumCases'] = CCTVAChart_newrow['Boise VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Portland VAMC NewSumCases'] = CCTVAChart_newrow['Portland VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Roseburg VAMC NewSumCases'] = CCTVAChart_newrow['Roseburg VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['White City VAMC NewSumCases'] = CCTVAChart_newrow['White City VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Puget Sound VAMC NewSumCases'] = CCTVAChart_newrow['Puget Sound VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Spokane VAMC NewSumCases'] = CCTVAChart_newrow['Spokane VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Walla Walla VAMC NewSumCases'] = CCTVAChart_newrow['Walla Walla VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Fort Wayne VAMC NewSumCases'] = CCTVAChart_newrow['Fort Wayne VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Indianapolis VAMC NewSumCases'] = CCTVAChart_newrow['Indianapolis VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Marion VAMC NewSumCases'] = CCTVAChart_newrow['Marion VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Ann Arbor VAMC NewSumCases'] = CCTVAChart_newrow['Ann Arbor VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Battle Creek VAMC NewSumCases'] = CCTVAChart_newrow['Battle Creek VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Detroit VAMC NewSumCases'] = CCTVAChart_newrow['Detroit VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Tomah VAMC NewSumCases'] = CCTVAChart_newrow['Tomah VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Chillicothe VAMC NewSumCases'] = CCTVAChart_newrow['Chillicothe VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Cincinnati VAMC NewSumCases'] = CCTVAChart_newrow['Cincinnati VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Cleveland VAMC NewSumCases'] = CCTVAChart_newrow['Cleveland VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Columbus VAMC NewSumCases'] = CCTVAChart_newrow['Columbus VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Dayton VAMC NewSumCases'] = CCTVAChart_newrow['Dayton VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Chicago VAMC NewSumCases'] = CCTVAChart_newrow['Chicago VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Danville VAMC NewSumCases'] = CCTVAChart_newrow['Danville VAMC NewSumCases'].map('{:,.2f}'.format)
+    CCTVAChart_newrow['Milwaukee VAMC NewSumCases'] = CCTVAChart_newrow['Milwaukee VAMC NewSumCases'].map('{:,.2f}'.format)
     
     # MIDDLETON = MADISON; REPORTING COMBINED W/ MILWAUKEE
     #CCTVAChart_newrow['William S. VAMC TotalSumCases'] = CCTVAChart_newrow['William S. VAMC TotalSumCases'].map('{:,.2f}'.format)
